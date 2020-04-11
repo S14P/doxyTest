@@ -27,7 +27,7 @@ addons:
 
 # random function for success
 script:
-  - touch d.txt
+  - echo "test"
 
 # Generate and deploy documentation
 after_success:
