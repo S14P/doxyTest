@@ -3,8 +3,8 @@ sudo: false
 
 # Blacklist
 branches:
-  except:
-    - gh-pages
+  only:
+    - master
 
 # Environment variables
 env:
@@ -13,6 +13,8 @@ env:
     - DOXYFILE: $TRAVIS_BUILD_DIR/Doxyfile
     - GH_REPO_REF: github.com/S14P/doxyTest.git
 
+before_install:
+        - gem install bundler
 # Install dependencies
 addons:
   apt:
