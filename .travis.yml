@@ -18,14 +18,17 @@ addons:
   apt:
     packages:
       - doxygen
+      - doxygen-doc
+      - doxygen-latex
+      - doxygen-gui
+      - graphviz
 
+# random function for success
 script:
-          - doxygen Doxyfile
+  - touch d.txt
 
-deploy:
-  provider: pages
-  skip_cleanup: true
-  local_dir: docs/html
-  github_token: $GH_REPO_TOKEN
-  on:
-    branch: master
+# Generate and deploy documentation
+after_success:
+  - cd $TRAVIS_BUILD_DIR
+  - chmod +x generateDocumentationAndDeploy.sh
+  - ./generateDocumentationAndDeploy.sh
