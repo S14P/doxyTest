@@ -59,7 +59,7 @@ git config user.email "travis@travis-ci.org"
 # stayed the same and will only update the changed files. So the gh-pages branch
 # can be safely cleaned, and it is sure that everything pushed later is the new
 # documentation.
-GLOBIGNORE='index.html'|'_config.yml'
+GLOBIGNORE='index.html'
 rm -rf *
 
 # Need to create a .nojekyll file to allow filenames starting with an underscore
