@@ -1,4 +1,6 @@
 /**
+ * \brief just a test
+ *
  * this is the class description of my class
  */
 class myClass {
@@ -8,11 +10,15 @@ class myClass {
 		double* p; 	/**< could be a density */
 	public:
 		/**
+		 * \brief con
+		 *
 		 * constructor of myClass in .h
 		 */
 		myClass();
 		/**
-		 * declaration of myfunction
+		 * \brief myfunction declaration
+		 *
+		 * detailed description declaration of myfunction
 		 */
 		myfunction();
 };
